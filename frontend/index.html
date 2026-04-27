@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeBoard — доска мемов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 MemeBoard</h1>
+
+        <div class="form-card">
+            <div class="form-row">
+                <input type="text" id="titleInput" placeholder="Название мема" maxlength="100">
+                <select id="categorySelect">
+                    <option value="программирование">💻 Программирование</option>
+                    <option value="учёба">📚 Учёба</option>
+                    <option value="жизнь">😄 Жизнь</option>
+                    <option value="кино">🎬 Кино</option>
+                    <option value="спорт">⚽ Спорт</option>
+                </select>
+                <select id="ratingSelect">
+                    <option value="5">⭐⭐⭐⭐⭐ 5</option>
+                    <option value="4">⭐⭐⭐⭐ 4</option>
+                    <option value="3">⭐⭐⭐ 3</option>
+                    <option value="2">⭐⭐ 2</option>
+                    <option value="1">⭐ 1</option>
+                </select>
+                <button id="addBtn">Добавить</button>
+            </div>
+            <div id="errorMsg" class="error-message"></div>
+        </div>
+
+        <p id="memesCount" class="memes-count"></p>
+
+        <div id="memesGrid" class="memes-grid">
+            <div class="loading-text">Загружаем мемы...</div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

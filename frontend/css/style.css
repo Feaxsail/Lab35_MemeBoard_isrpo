@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f7fafc;
+    color: #1a1a1a;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Карточка формы */
+.form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.form-row input,
+.form-row select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: white;
+    transition: border-color 0.2s;
+}
+
+.form-row input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-row button {
+    padding: 0.6rem 1.5rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form-row button:hover {
+    background: #5a6fd6;
+}
+
+.form-row button:disabled {
+    background: #a0aec0;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    min-height: 1.2rem;
+}
+
+.memes-count {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 0.75rem;
+}
+
+.loading-text {
+    text-align: center;
+    color: #718096;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+/* Сетка мемов */
+.memes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+/* Карточка мема */
+.meme-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.meme-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.meme-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.meme-category {
+    display: inline-block;
+    background: #ebf4ff;
+    color: #3182ce;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.meme-rating {
+    font-size: 0.9rem;
+    color: #f6ad55;
+}
+
+.meme-date {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-top: auto;
+}
+
+.meme-card button {
+    align-self: flex-end;
+    background: none;
+    border: 1px solid #fed7d7;
+    color: #e53e3e;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.meme-card button:hover {
+    background: #fff5f5;
+}
+
+.empty-text {
+    text-align: center;
+    color: #a0aec0;
+    padding: 3rem;
+    grid-column: 1 / -1;
+    font-size: 1rem;
+}
