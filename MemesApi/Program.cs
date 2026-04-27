@@ -2,7 +2,7 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+// Регистрация сервисов
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -11,7 +11,7 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+// Регистрация политики CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -22,7 +22,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-
+// Middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
